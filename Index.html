@@ -20,8 +20,13 @@
     }
     section {
       padding: 10px;
-      max-width: 700px;
+      max-width: 520px;
       margin: auto;
+    }
+    container {
+      display: flex;
+      margin-top:20px;
+      /* gap: 20px; space between the sections */
     }
     h1 {
       color: rgb(250, 250, 250);
@@ -60,20 +65,31 @@
       background-color: #15202d;
     }
     .subject-list, .testimonial-list {
-      background: white;
+      height: 250px;
+      background: rgb(219, 223, 235);
       padding: 10px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       margin-bottom: 30px;
+      flex: 1; /* equal width */
+      color:  #385e85;
+    }
+    .testimonial-list
+    {
+      max-width:950px;
+      height: 200px;
     }
     ul {
       padding-left: 20px;
+    }
+    li {
+      padding-bottom: 8px;
+      list-style-type: none;
     }
     blockquote {
       margin: 15px 0;
       padding-left: 15px;
       border-left: 4px solid #385e85;
-      color: #555;
     }
     footer {
       text-align: center;
@@ -85,37 +101,47 @@
 <body>
 
   <header>
-    <h1>Maths By MP</h1>
-    <h1>Personalised Primary Maths Tutoring (year 2-5)</h1>
-    <p>Maths • Mathematical Reasoning . Mental maths</p>
-    <p>contact: 0433897023</p>
+    <h1>Maths by MP</h1>
+    <h2>Personalised Primary Maths Tutoring (year 2-5)</h2>
+    <p>MATHS FUNDAMENTALS • MATHEMETICAL REASONONG . MENTAL MATHS</p>
+    <h2>contact us: 0433897023</h2>
   </header>
 
-  <section>
-    <h2>Strong maths fundamental with MP</h2> 
-    <p>
-      <ul>
-      <li>Small groups of <b>2–3 students</b> per grade</li>
-      <li><b>90-minute</b> sessions designed for deeper understanding</li>  
-      <li><b>Individualised attention</b> for each student</li>
-      <li>Highly <b>affordable</b> rates</li>
-      <li><b>Fortnightly</b> personalised progress <b>feedback</b></li>
-      <li><b>Tailored lessons</b> offered to cover specific needs, homework help and revision</li>
-      <li>Two assessments per term to gauge academic improvement</li>
-      </ul>
-    </p>
-  </section>
+  <container>
+    <section class="subject-list">
+      <h2>Strong fundamentals with MP</h2> 
+        <ul>
+          <li>Small groups of <b>2–3 students</b> per grade</li>
+          <li><b>90-minute</b> sessions designed for deeper understanding</li>  
+          <li><b>Individualised attention</b> for each student</li>
+          <li>Highly <b>affordable</b> rates</li>
+          <li><b>Fortnightly</b> personalised progress <b>feedback</b></li>
+          <li><b>Tailored lessons</b> offered to cover specific needs, homework help and revision</li>
+        </ul>
+    </section>
 
-  <section class="subject-list">
-    <h2>Lessons schedule and Prices</h2>
-    <ul>
-      <li>Year 2-3, $28 for 90 mins lesson</li>
-      <li>Year 4-5, $38 for 90 mins lesson</li>
-      <li>10 lessons per term</li>
-      <li>Holidays classes available - please contact</li>
-      <li>OC preparation - please contact</li>
-    </ul>
-  </section>
+    <section class="subject-list">
+      <h2>Lessons schedule and Prices</h2>
+      <ul>
+        <li>Year 2-3, $28 for 90 mins lesson</li>
+        <li>Year 4-5, $38 for 90 mins lesson</li>
+        <li>10 lessons per term</li>
+        <li>Holidays classes available - please contact</li>
+        <li>OC preparation - please contact</li>
+      </ul>
+    </section>
+
+    <section class="subject-list">
+      <h2>Course structure</h2>
+      <ul>
+        <li>Year 2</li>
+        <li>Year 3</li>
+        <li>Year 4</li>
+        <li>Year 5</li>
+        <li>OC preparation</li>
+      </ul>
+    </section>
+    </container>
 
   <section class="testimonial-list">
     <h2>What Parents Say</h2>
@@ -123,7 +149,7 @@
     <blockquote>“The fortnightly feedback gives me a clear idea of my son's progress. He says learning maths with Mahek is fun,” – Parent of Year 2 Student</blockquote>
   </section>
 
-  <section>
+  <!-- <section>
     <h2>Contact Me</h2>
     <form action="mailto:foram.shah1210@gmail.com" method="POST">
       <label for="name">Your Name</label>
@@ -140,10 +166,10 @@
 
       <button type="submit">Send Message</button>
     </form>
-  </section>
+  </section> -->
 
   <footer>
-    &copy; MathsbyMP tutoring | Phone: 0433897023 | Email: foram.shah1210@gmail.com
+    &copy; MathsbyMP tutoring | Phone: 0433897023 | Email: foram.shah1210@gmail.com | location: Baulkham Hills
   </footer>
 
 </body>
