@@ -4,47 +4,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maths by MP - Private Tutoring</title>
-
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <style>
+    :root {
+      --primary-color: #385e85;
+      --secondary-color: #15202d;
+      --light-color: rgb(250, 250, 250);
+      --light-blue: rgb(219, 223, 235);
+    }
+    
     body {  
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color:rgb(250, 250, 250);
+      background-color: var(--light-color);
     }
+    
     header {
-      background-color: #385e85;
-      color: rgb(250, 250, 250);
-      padding: 5px;
+      background-color: var(--primary-color);
+      color: var(--light-color);
+      padding: 1.5rem 0.5rem;
       text-align: center;
     }
-    section {
-      padding: 10px;
-      max-width: 520px;
-      margin: auto;
+    
+    .section-container {
+      padding: 1.5rem 0;
     }
-    container {
-      display: flex;
-      margin-top:20px;
-      /* gap: 20px; space between the sections */
-    }
+    
     h1 {
-      color: rgb(250, 250, 250);
+      color: var(--light-color);
+      font-size: 2.5rem;
     }
+    
     h2 {
-      color: #15202d;
+      color: var(--secondary-color);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
+    
+    header h2 {
+      color: var(--light-color);
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
+    }
+    
     form {
-      background: rgb(250, 250, 250);
+      background: var(--light-color);
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+    
     label {
       display: block;
       margin-top: 10px;
       font-weight: bold;
     }
+    
     input, textarea {
       width: 100%;
       padding: 10px;
@@ -52,125 +71,187 @@
       border: 1px solid #ccc;
       border-radius: 6px;
     }
+    
     button {
       margin-top: 15px;
       padding: 10px 20px;
-      background-color: #15202d;
+      background-color: var(--secondary-color);
       color: white;
       border: none;
       border-radius: 6px;
       cursor: pointer;
     }
+    
     button:hover {
-      background-color: #15202d;
+      background-color: var(--primary-color);
     }
-    .subject-list, .testimonial-list {
-      height: 250px;
-      background: rgb(219, 223, 235);
-      padding: 10px;
+    
+    .info-card {
+      height: 100%;
+      background: var(--light-blue);
+      padding: 1.25rem;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      margin-bottom: 30px;
-      flex: 1; /* equal width */
-      color:  #385e85;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
     }
-    .testimonial-list
-    {
-      max-width:950px;
-      height: 200px;
+    
+    .testimonial-section {
+      background: var(--light-blue);
+      padding: 1.25rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin: 1.5rem auto;
+      color: var(--primary-color);
     }
+    
     ul {
-      padding-left: 20px;
+      padding-left: 1.25rem;
+      margin-bottom: 0;
     }
+    
     li {
-      padding-bottom: 8px;
+      padding-bottom: 0.5rem;
       list-style-type: none;
     }
+    
     blockquote {
-      margin: 15px 0;
-      padding-left: 15px;
-      border-left: 4px solid #385e85;
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 4px solid var(--primary-color);
     }
+    
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 1.25rem;
       color: #555;
+      background-color: #f5f5f5;
+      margin-top: 1.5rem;
+    }
+    
+    /* Media Queries */
+    @media (max-width: 767.98px) {
+      header {
+        padding: 1rem 0.5rem;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      header h2 {
+        font-size: 1.1rem;
+      }
+      
+      header p {
+        font-size: 0.9rem;
+      }
+      
+      .info-card {
+        height: auto;
+        margin-bottom: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Maths by MP</h1>
-    <h2>Personalised Primary Maths Tutoring (year 2-5)</h2>
-    <p>MATHS FUNDAMENTALS • MATHEMETICAL REASONONG . MENTAL MATHS</p>
-    <h2>contact us: 0433897023</h2>
+  <header class="mb-3">
+    <div class="container">
+      <h1>Maths by MP</h1>
+      <h2>Personalised Primary Maths Tutoring (year 2-5)</h2>
+      <p>MATHS FUNDAMENTALS • MATHEMATICAL REASONING • MENTAL MATHS</p>
+      <h2>contact us: 0433897023</h2>
+    </div>
   </header>
 
-  <container>
-    <section class="subject-list">
-      <h2>Strong fundamentals with MP</h2> 
-        <ul>
-          <li>Small groups of <b>2–3 students</b> per grade</li>
-          <li><b>90-minute</b> sessions designed for deeper understanding</li>  
-          <li><b>Individualised attention</b> for each student</li>
-          <li>Highly <b>affordable</b> rates</li>
-          <li><b>Fortnightly</b> personalised progress <b>feedback</b></li>
-          <li><b>Tailored lessons</b> offered to cover specific needs, homework help and revision</li>
-        </ul>
-    </section>
+  <div class="container section-container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="info-card">
+          <h2>Strong fundamentals with MP</h2> 
+          <ul>
+            <li>Small groups of <b>2–3 students</b> per grade</li>
+            <li><b>90-minute</b> sessions designed for deeper understanding</li>  
+            <li><b>Individualised attention</b> for each student</li>
+            <li>Highly <b>affordable</b> rates</li>
+            <li><b>Fortnightly</b> personalised progress <b>feedback</b></li>
+            <li><b>Tailored lessons</b> offered to cover specific needs, homework help and revision</li>
+          </ul>
+        </div>
+      </div>
 
-    <section class="subject-list">
-      <h2>Lessons schedule and Prices</h2>
-      <ul>
-        <li>Year 2-3, $28 for 90 mins lesson</li>
-        <li>Year 4-5, $38 for 90 mins lesson</li>
-        <li>10 lessons per term</li>
-        <li>Holidays classes available - please contact</li>
-        <li>OC preparation - please contact</li>
-      </ul>
-    </section>
+      <div class="col-md-4 mb-3">
+        <div class="info-card">
+          <h2>Lessons schedule and Prices</h2>
+          <ul>
+            <li>Year 2-3, $28 for 90 mins lesson</li>
+            <li>Year 4-5, $38 for 90 mins lesson</li>
+            <li>10 lessons per term</li>
+            <li>Holidays classes available - please contact</li>
+            <li>OC preparation - please contact</li>
+          </ul>
+        </div>
+      </div>
 
-    <section class="subject-list">
-      <h2>Course structure</h2>
-      <ul>
-        <li>Year 2</li>
-        <li>Year 3</li>
-        <li>Year 4</li>
-        <li>Year 5</li>
-        <li>OC preparation</li>
-      </ul>
-    </section>
-    </container>
+      <div class="col-md-4 mb-3">
+        <div class="info-card">
+          <h2>Course structure</h2>
+          <ul>
+            <li>Year 2</li>
+            <li>Year 3</li>
+            <li>Year 4</li>
+            <li>Year 5</li>
+            <li>OC preparation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <section class="testimonial-list">
-    <h2>What Parents Say</h2>
-    <blockquote>“Thanks so much Mahek. I really appericiate your support and hardwork. My daughter has really improved a lot in maths these days. – Parent of Year 3 Student</blockquote>
-    <blockquote>“The fortnightly feedback gives me a clear idea of my son's progress. He says learning maths with Mahek is fun,” – Parent of Year 2 Student</blockquote>
-  </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="testimonial-section">
+          <h2>What Parents Say</h2>
+          <blockquote>"Thanks so much Mahek. I really appericiate your support and hardwork. My daughter has really improved a lot in maths these days. – Parent of Year 3 Student</blockquote>
+          <blockquote>"The fortnightly feedback gives me a clear idea of my son's progress. He says learning maths with Mahek is fun," – Parent of Year 2 Student</blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- <section>
-    <h2>Contact Me</h2>
-    <form action="mailto:foram.shah1210@gmail.com" method="POST">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required />
+  <!-- Contact form is commented out in the original file -->
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <h2>Contact Me</h2>
+        <form action="mailto:foram.shah1210@gmail.com" method="POST">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required />
 
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required />
-      
-      <label for="phone">Your Phone</label>
-      <input type="phone" id="phone" name="phone" required />
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required />
+          
+          <label for="phone">Your Phone</label>
+          <input type="phone" id="phone" name="phone" required />
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
 
-      <button type="submit">Send Message</button>
-    </form>
-  </section> -->
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div> -->
 
   <footer>
-    &copy; MathsbyMP tutoring | Phone: 0433897023 | Email: foram.shah1210@gmail.com | location: Baulkham Hills
+    <div class="container">
+      &copy; MathsbyMP tutoring | Phone: 0433897023 | Email: foram.shah1210@gmail.com | location: Baulkham Hills
+    </div>
   </footer>
 
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
